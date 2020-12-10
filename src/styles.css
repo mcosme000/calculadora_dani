@@ -1,8 +1,15 @@
+.container {
+  margin: 150px auto;
+  width: 200px;
+}
+
 #screen {
   width: 200px;
   height: 50px;
   background: #3a3a3a;
   color: #fff;
+  text-align: right;
+  font-size: 30px;
 }
 
 #keyboard {
@@ -20,6 +27,24 @@
   width: 25%;
   background: grey;
   border: 1px solid #000;
+  text-align: center;
+  vertical-align: auto;
+}
+
+.key:hover {
+  cursor: pointer;
+}
+
+.dark:focus {
+  background
+}
+
+.key:focus {
+
+}
+
+.orange:focus {
+  
 }
 .big {
   width: 50%;
