@@ -1,0 +1,12 @@
+1. Stage untracked files
+git add file1 file2 ...
+
+2. Commit to your local
+git commit -m "mensaje"
+
+3. Push to remote
+git push
+
+---
+
+git pull
