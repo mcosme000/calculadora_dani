@@ -44,13 +44,35 @@
     updateScreen(0);
   }
 
+  // CUANDO PULSAMOS = ... hay que elegir entre los 4 operadores //
+  // Las funciones de op solo se ejecutan cuando pulso el botón = //
   document.getElementById("keyEqual").addEventListener("click", () => {
-    add();
-    op = undefined;
-    isReset = true;
+    if (op === "add") {
+      add();
+      op = undefined;
+      isReset = true;
+    } else {
+      if (op === "less") {
+        less();
+        op = undefined;
+        isReset = true;
+      } else {
+        if (op === "multi") {
+          multi();
+          op = undefined;
+          isReset = true;
+        } else {
+          if (op === "div") {
+            div();
+            op = undefined;
+            isReset = true;
+          }
+        }
+      }
+    }
   });
 
-  // FUNCIONES DE OPERADORES //
+  // -*-*-*-*-*-*- FUNCIONES DE OPERADORES -*-*-*-*-*-*- //
 
   // 1. Función de suma //
   function add() {
@@ -65,11 +87,55 @@
   document.getElementById("keyAdd").addEventListener("click", () => {
     add();
     op = "add";
+    // cuando pulsamos el botón de +, el op es add,
+    // así que no está undefined //
+
+    // este string "add" lo uso para añadir condicionales y distinguir
+    // entre los cuatro tipos de operadores!! //
   });
 
   // 2. Función de resta //
+  function less() {
+    if (op !== undefined) {
+      a = a - b;
+      updateScreen(a);
+      b = 0;
+    }
+    isReset = false;
+  }
+
+  document.getElementById("keyLess").addEventListener("click", () => {
+    less();
+    op = "less";
+  });
 
   // 3. Función de multiplicación //
+  function multi() {
+    if (op !== undefined) {
+      a = a * b;
+      updateScreen(a);
+      b = 0;
+    }
+    isReset = false;
+  }
+
+  document.getElementById("keyMulti").addEventListener("click", () => {
+    multi();
+    op = "multi";
+  });
 
   // 4. Función de división //
+  function div() {
+    if (op !== undefined) {
+      a = a / b;
+      updateScreen(a);
+      b = 0;
+    }
+    isReset = false;
+  }
+
+  document.getElementById("keyDiv").addEventListener("click", () => {
+    div();
+    op = "div";
+  });
 })();
