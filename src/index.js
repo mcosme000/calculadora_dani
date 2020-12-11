@@ -6,7 +6,7 @@
   reset();
 
   function updateScreen(value) {
-    let screen = document.getElementById("screen");
+    let screen = document.getElementById("screen2");
     screen.innerText = value;
   }
   // array con valores del 1 al 9 para los números //

@@ -10,44 +10,46 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>JS_project: Calculadora</title>
   </head>
   <body>
     <div id="container" class="container">
-      <div id="screen"></div>
+      <div class="screen">
+        <p id="screen2"></p>
+      </div>
       <div id="keyboard">
         <div class="row">
-          <div class="key dark" id="keyReset">AC</div>
-          <div class="key dark">+/-</div>
-          <div class="key dark">%</div>
-          <div class="key orange" id="keyDiv">÷</div>
+          <button class="key dark reset" id="keyReset">AC</button>
+          <button class="key dark">+/-</button>
+          <button class="key dark" id="keyPercent">%</button>
+          <button class="key orange" id="keyDiv">÷</button>
         </div>
 
         <div class="row">
-          <div class="key" id="key7">7</div>
-          <div class="key" id="key8">8</div>
-          <div class="key" id="key9">9</div>
-          <div class="key orange" id="keyMulti">x</div>
+          <button class="key" id="key7">7</button>
+          <button class="key" id="key8">8</button>
+          <button class="key" id="key9">9</button>
+          <button class="key orange" id="keyMulti">x</button>
         </div>
 
         <div class="row">
-          <div class="key" id="key4">4</div>
-          <div class="key" id="key5">5</div>
-          <div class="key" id="key6">6</div>
-          <div class="key orange" id="keyLess">-</div>
+          <button class="key" id="key4">4</button>
+          <button class="key" id="key5">5</button>
+          <button class="key" id="key6">6</button>
+          <button class="key orange" id="keyLess">-</button>
         </div>
 
         <div class="row">
-          <div class="key" id="key1">1</div>
-          <div class="key" id="key2">2</div>
-          <div class="key" id="key3">3</div>
-          <div class="key orange" id="keyAdd">+</div>
+          <button class="key" id="key1">1</button>
+          <button class="key" id="key2">2</button>
+          <button class="key" id="key3">3</button>
+          <button class="key orange" id="keyAdd">+</button>
         </div>
 
         <div class="row">
-          <div class="key big" id="key0">0</div>
-          <div class="key">,</div>
-          <div class="key" id="keyEqual">=</div>
+          <button class="key big" id="key0">0</button>
+          <button class="key">,</button>
+          <button class="key" id="keyEqual">=</button>
         </div>
       </div>
     </div>
